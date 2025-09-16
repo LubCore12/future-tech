@@ -1,0 +1,82 @@
+@use '../helpers' as *;
+
+.accordion {
+  padding: rem(34);
+
+  @include laptop {
+    padding: rem(24);
+  }
+
+  &__details {
+    &[open] {
+      .accordion__title {
+        &::after,
+        &::before {
+          background-color: var(--color-light);
+        }
+
+        &::after {
+          rotate: 0deg;
+        }
+      }
+
+      & + .accordion__content {
+        grid-template-rows: 1fr;
+      }
+    }
+  }
+
+  &__summary {
+    color: var(--color-light);
+    list-style: none;
+    cursor: pointer;
+
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+  
+  &__title {
+    position: relative;
+    padding-right: rem(50);
+    font-weight: 500;
+    color: inherit;
+    transition-duration: var(--transition-duration);
+    user-select: none;
+
+    &::before,
+    &::after {
+      @include abs-y;
+
+      content: '';
+      right: 0;
+      width: rem(16);
+      height: rem(2);
+      background-color: var(--color-accent);
+      border-radius: rem(20);
+      transition-duration: var(--transition-duration);
+    }
+
+    &::after {
+      rotate: 90deg;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition-duration: 0.35s;
+
+    &-inner {
+      overflow: hidden;
+    }
+
+    &-body {
+      --offsetTop: #{fluid(24, 16)};
+
+      padding-top: var(--offsetTop);
+      margin-top: var(--offsetTop);
+      border-top: var(--border);
+    }
+  }
+}

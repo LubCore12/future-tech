@@ -1,0 +1,14 @@
+@use '../helpers' as *;
+
+.accordion-group {
+  display: grid;
+  row-gap: fluid(30, 20);
+
+  @include laptop {
+    padding-right: rem(60);
+  }
+
+  @include tablet {
+    padding-right: 0;
+  }
+}

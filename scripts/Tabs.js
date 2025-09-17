@@ -2,7 +2,7 @@ import BaseComponent from "./BaseComponent.js";
 
 const rootSelector = '[data-js-tabs]'
 
-class Tabs extends BaseComponent{
+class Tabs extends BaseComponent {
   selectors = {
     root: rootSelector,
     button: '[data-js-tabs-button]',
@@ -33,7 +33,7 @@ class Tabs extends BaseComponent{
   }
 
   updateUI() {
-    const { activeTabIndex } = this.state
+    const {activeTabIndex} = this.state
 
     this.buttonElements.forEach((buttonElement, index) => {
       const isActive = index === activeTabIndex
@@ -66,7 +66,7 @@ class Tabs extends BaseComponent{
     const newTabIndex =
       this.state.activeTabIndex === this.limitTabsIndex ? 0 : this.state.activeTabIndex + 1
 
-      this.activateTab(newTabIndex)
+    this.activateTab(newTabIndex)
   }
 
   firstTab = () => {
@@ -84,7 +84,7 @@ class Tabs extends BaseComponent{
   onKeyDown = (event) => {
     event.preventDefault()
 
-    const { code, metaKey } = event
+    const {code, metaKey} = event
 
     const action = {
       ArrowLeft: this.previousTab,

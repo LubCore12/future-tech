@@ -57,7 +57,7 @@
   &__metrics {
     grid-area: metrics;
 
-    @include  tablet-above {
+    @include tablet-above {
       border-top: var(--border);
     }
 

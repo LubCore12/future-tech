@@ -33,7 +33,7 @@
       }
     }
   }
-  
+
   &__body {
     position: relative;
   }
@@ -47,7 +47,7 @@
       pointer-events: none;
     }
   }
-  
+
   &__dropdown {
     position: absolute;
     top: calc(100% + #{rem(4)});

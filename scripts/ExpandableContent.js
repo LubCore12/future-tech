@@ -24,7 +24,7 @@ class ExpandableContent {
   }
 
   expand() {
-    const { offsetHeight, scrollHeight } = this.rootElement
+    const {offsetHeight, scrollHeight} = this.rootElement
 
     this.rootElement.classList.add(this.stateClasses.isExpanded)
     this.rootElement.animate([

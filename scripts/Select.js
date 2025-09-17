@@ -2,7 +2,7 @@ import BaseComponent from "./BaseComponent.js";
 
 const rootSelector = '[data-js-select]'
 
-class Select extends BaseComponent{
+class Select extends BaseComponent {
   selectors = {
     root: rootSelector,
     originalControl: '[data-js-select-original-control]',
@@ -107,7 +107,7 @@ class Select extends BaseComponent{
   }
 
   onClick = (event) => {
-    const { target } = event
+    const {target} = event
     const isOutsideDropdownClick = target.closest(this.selectors.dropdown) !== this.dropdownElement
     const isButtonClick = target === this.buttonElement
 
@@ -177,7 +177,7 @@ class Select extends BaseComponent{
   }
 
   onKeyDown = (event) => {
-    const { code } = event
+    const {code} = event
 
     const action = {
       ArrowUp: this.onArrowUpKeyDown,

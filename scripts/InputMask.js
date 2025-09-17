@@ -8,13 +8,13 @@ class InputMask {
 
   init() {
     const isLibReady = typeof IMask !== 'undefined'
-      IMask(
-        this.rootElement,
+    IMask(
+      this.rootElement,
 
-        {
-          mask: this.rootElement.dataset.jsInputMask
-        }
-      )
+      {
+        mask: this.rootElement.dataset.jsInputMask
+      }
+    )
     if (isLibReady) {
 
     } else {

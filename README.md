@@ -12,11 +12,11 @@ A modern, responsive web project showcasing futuristic technology concepts and i
 ## Installation & Setup
 
 1. **Cloning the repository**
-   
+
    ```bash
    git clone git@github.com:LubCore12/future-tech.git
 
 2. **Installing npm libraies**
-   
+
    ```bash
    npm i

@@ -2,7 +2,7 @@ class Header {
   selectors = {
     root: '[data-js-header]',
     overlay: '[data-js-header-overlay]',
-   burgerButton: '[data-js-header-burger-button]',
+    burgerButton: '[data-js-header-burger-button]',
   }
 
   stateClasses = {
@@ -19,9 +19,9 @@ class Header {
 
   onBurgerButtonClick = () => {
     setTimeout(() => {
-    this.burgerButtonElement.classList.toggle(this.stateClasses.isActive)
-    this.overlayElement.classList.toggle(this.stateClasses.isActive)
-    document.documentElement.classList.toggle(this.stateClasses.isLock)
+      this.burgerButtonElement.classList.toggle(this.stateClasses.isActive)
+      this.overlayElement.classList.toggle(this.stateClasses.isActive)
+      document.documentElement.classList.toggle(this.stateClasses.isLock)
     })
   }
 
